@@ -1,6 +1,15 @@
 # FormValidation
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+# Demo
+![ezgif com-crop](https://user-images.githubusercontent.com/34381967/62007681-644c6280-b148-11e9-9bb4-71c9ba917766.gif)
+
+# Sceenshot
+![Reactive-form screenshot](https://user-images.githubusercontent.com/34381967/62007522-5695dd80-b146-11e9-9b24-b86ee3590b98.PNG)
+
+
+## How to install full project 
+You should run `npm install` to load all dependecies of the project.
 
 ## Development server
 
