@@ -1,0 +1,86 @@
+
+<div class="container">
+<br>
+<br>
+
+  <form [formGroup]="form">
+      <fieldset class="scheduler-border">
+          <legend class="scheduler-border">Sign Up</legend>
+
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label for="inputEmail4">First Name</label>
+                  <input type="text" formControlName="firstName" class="form-control" name="Name" placeholder="First Name">
+                  <div class="validation-error" *ngIf = "form.touched && !form.controls.firstName.valid"> <!-- invalid and touched are two function created by angular By default -->
+                    FirstName should be minimum 4 characters length
+                       </div>
+
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4">Last Name</label>
+                  <input type="text" class="form-control" formControlName="lastName" placeholder="Last Name">
+                </div>
+          </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="Email">
+        <div class="validation-error" *ngIf = "form.touched && !form.controls.email.valid"> <!-- invalid and touched are two function created by angular By default -->
+        Email is required
+        </div>
+
+      </div>
+
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Password">
+          </div>
+          <div class="form-group col-md-6">
+              <label for="inputPassword4">Confirm Password</label>
+              <input type="password" class="form-control" formControlName="confirmPassword"placeholder="Confirm Password">
+              <div class="validation-error" *ngIf = "form.touched && !form.controls.confirmPassword.valid"> <!-- invalid and touched are two function created by angular By default -->
+                Password and Confirm Password Should Match And Not Empty.
+              </div>
+
+            </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2">Address</label>
+      <input type="text" class="form-control" formControlName="address" placeholder="Apartment">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputCity">City</label>
+        <input type="text" class="form-control" formControlName="city">
+
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <select formControlName="state" class="form-control">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputZip">Zip</label>
+        <input type="text" class="form-control" formControlName="zip">
+
+        <div class="validation-error" *ngIf = "form.touched && !form.controls.zip.invalid"> <!-- invalid and touched are two function created by angular By default -->
+          Zip code should be 6 digit number only
+             </div>
+
+      </div>
+    </div>
+
+    <div class="form-group col-md-12 text-center">
+    <button type="submit" class="btn btn-primary btn-lg" (click)="onSubmit()">Submit</button>&nbsp;&nbsp;&nbsp;
+    <button type="reset" class="btn btn-warning btn-lg">Reset</button>
+  </div>
+    </fieldset>
+  </form>
+</div>
+
+
